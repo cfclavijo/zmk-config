@@ -19,8 +19,18 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: kyria_rev3_left nice_view_adapter nice_view
+    shield: kyria_rev3_left glidepoint_i2c_split_central nice_view_adapter nice_view
   - board: nice_nano_v2
-    shield: kyria_rev3_right
+    shield: kyria_rev3_right glidepoint_i2c_split_peripheral
   - board: nice_nano_v2
     shield: settings_reset
+  - board: nice_nano_v2
+    shield: kyria_rev3_left glidepoint_i2c_split_central nice_view_adapter nice_view
+    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    snippet: zmk-usb-logging
+    artifact-name: kyria_rev3_left_with_logging
+  - board: nice_nano_v2
+    shield: kyria_rev3_right glidepoint_i2c_split_peripheral
+    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    snippet: zmk-usb-logging
+    artifact-name: kyria_rev3_right_with_logging

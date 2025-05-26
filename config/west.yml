@@ -2,6 +2,10 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: petejohanson
+      url-base: https://github.com/petejohanson
+    - name: pm0u
+      url-base: https://github.com/pm0u
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -9,5 +13,11 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: cirque-input-module
+      remote: petejohanson
+      revision: main
+    - name: glidepoint_i2c
+      remote: pm0u
+      revision: main
   self:
     path: config
