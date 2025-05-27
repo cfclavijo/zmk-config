@@ -1,16 +1,23 @@
 // Pull in the shared configuration
 #include "shared.dtsi"
 
+&pinctrl {
+    i2c0_default {
+        group1 {
+            bias-pull-up;
+        };
+    };
+};
+
 &pro_micro_i2c {
     status = "okay";
 
-    glidepoint: glidepoint@3c {
+    glidepoint: glidepoint@2a {
         compatible = "cirque,pinnacle";
-        reg = <0x3c>;
+        reg = <0x2a>;
         status = "okay";
         dr-gpios = <&pro_micro 2 (GPIO_ACTIVE_HIGH)>;
         sensitivity = "4x";
-        sleep;
     };
 };
 
