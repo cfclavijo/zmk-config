@@ -20,9 +20,12 @@
 include:
   - board: nice_nano_v2
     shield: kyria_rev3_left nice_view_adapter nice_view
-    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
   - board: nice_nano_v2
     shield: kyria_rev3_right
-    cmake-args: -DCONFIG_ZMK_DISPLAY=n -DCONFIG_I2C=y -DCONFIG_ZMK_MOUSE=y -DCONFIG_INPUT_PINNACLE=y
   - board: nice_nano_v2
     shield: settings_reset
+  - board: nice_nano_v2
+    shield: kyria_rev3_left nice_view_adapter nice_view
+    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    snippet: zmk-usb-logging
+    artifact-name: kyria_rev3_left_with_logging
